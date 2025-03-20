@@ -1,0 +1,272 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    padding-top: 70px; /* Add padding to accommodate fixed header */
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
+    height: 60px;
+    background: linear-gradient(to right, #a064e4, #6092ee);
+}
+
+.navbar .button-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+/* Logo styles */
+.navbar img:first-child {
+    height: 40px;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+/* Search bar styles - FIXED SIZE */
+.navbar input[type="text"] {
+    width: 250px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #DCD9E8;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: 5px;
+    padding: 10px;
+    right: 0;
+}
+
+.dropdown .category-dropdown {
+    left: 0;
+    top: 40px;
+}
+
+.dropdown .profile-dropdown {
+    right: 0;
+    top: 40px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content button {
+    background: #ffffff;
+    border: none;
+    padding: 8px 10px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-content.profile-dropdown button {
+    background: #9CBFE2;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 15px;
+    width: auto;
+    display: block;
+    margin: 5px auto;
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content img {
+    margin: 10px auto;
+    display: block;
+}
+
+.dropdown-content p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Main content wrapper */
+main {
+    flex: 1;
+    min-height: calc(100vh - 170px);
+}
+
+/* Section Styles */
+section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+section h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #a064e4, #6092ee);
+    text-align: center;
+}
+section h2:not(footer h2) {
+    text-align: left;
+}
+
+/* New Arrival Section */
+.new-arrival {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.product {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.product p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.product p:nth-child(3) {
+    font-weight: bold;
+    color: #333;
+}
+
+.product del {
+    color: #999;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.product button {
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.product button:hover {
+    background-color: #3f51b5;
+}
+
+/* Footer Styles */
+footer {
+    position: static;
+    background: linear-gradient(to right, #a064e4, #6092ee);
+    padding: 20px 15px;
+    width: 100%;
+    margin-top: auto;
+    color: white;
+}
+
+footer h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.about-us {
+    margin-bottom: 20px;
+}
+
+/* Footer social media links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
